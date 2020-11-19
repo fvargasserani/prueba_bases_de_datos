@@ -36,11 +36,9 @@ CREATE TABLE producto(
 );
 
 CREATE TABLE factura_producto(
-    id_factura_producto SERIAL,
+    id_factura_producto INT,
     id_factura INT, 
     id_producto INT,
-    cantidad_producto SMALLINT,
-    PRIMARY KEY (id_factura_producto),
     FOREIGN KEY (id_factura) REFERENCES factura (id_factura),
     FOREIGN KEY (id_producto) REFERENCES producto (id_producto)
 );
@@ -246,3 +244,362 @@ INSERT INTO producto(
     1
 );
 
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    101,
+    '2020-11-23',
+    1
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    102,
+    '2020-11-23',
+    1
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    103,
+    '2020-11-24',
+    2
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    104,
+    '2020-11-25',
+    2
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    105,
+    '2020-11-25',
+    2
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    106,
+    '2020-11-26',
+    3
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    107,
+    '2020-11-26',
+    4
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    108,
+    '2020-11-26',
+    4
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    109,
+    '2020-11-27',
+    4
+);
+
+INSERT INTO factura(
+    id_factura,
+    fecha,
+    id_cliente_factura
+) VALUES (
+    110,
+    '2020-11-28',
+    4
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    1,
+    101,
+    2
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    2,
+    101,
+    4
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    3,
+    102,
+    5
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    4,
+    102,
+    6
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    5,
+    102,
+    8
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    6,
+    103,
+    7
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    7,
+    103,
+    6
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    8,
+    103,
+    3
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    9,
+    104,
+    1
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    10,
+    104,
+    6
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    11,
+    105,
+    7
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    12,
+    105,
+    1
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    13,
+    105,
+    2
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    14,
+    106,
+    3
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    15,
+    107,
+    6
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    16,
+    107,
+    8
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    17,
+    108,
+    8
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    18,
+    108,
+    4
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    19,
+    108,
+    3
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    20,
+    109,
+    6
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    21,
+    109,
+    8
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    22,
+    109,
+    7
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    23,
+    109,
+    5
+);
+
+INSERT INTO factura_producto(
+    id_factura_producto,
+    id_factura,
+    id_producto
+) VALUES(
+    24,
+    110,
+    1
+);
+
+-- ¿Que cliente realizó la compra más cara?
+SELECT id_cliente_factura
+INNER JOIN SUM (valor_unitario) AS total FROM producto
+GROUP BY id_cliente_factura
+ORDER BY total DESC
+LIMIT 1);
+
+-- ¿Que cliente pagó sobre 100 de monto?
+
+
+
+-- ¿Cuantos clientes han comprado el producto 6?
+SELECT COUNT(DISTINCT id_cliente_factura)
+FROM factura
+INNER JOIN factura_producto
+ON factura.id_factura = factura_producto.id_factura
+INNER JOIN producto
+ON factura_producto.id_producto = producto.id_producto
+WHERE producto.id_producto = 6;
