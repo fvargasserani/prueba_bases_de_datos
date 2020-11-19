@@ -597,7 +597,8 @@ ORDER BY SUM(valor_unitario) DESC
 LIMIT 1;
 
 -- ¿Que cliente pagó sobre 20000 de monto?
-SELECT id_cliente, nombre FROM cliente
+SELECT id_cliente, nombre
+FROM cliente
 INNER JOIN factura
 ON id_cliente = id_cliente_factura
 INNER JOIN factura_producto
@@ -608,8 +609,10 @@ GROUP BY id_cliente
 HAVING SUM(valor_unitario) > 20000;
 
 -- ¿Cuantos clientes han comprado el producto 6?
-SELECT COUNT(DISTINCT id_cliente_factura)
-FROM factura
+SELECT DISTINCT id_cliente, nombre, producto.nombre_producto
+FROM cliente
+INNER JOIN factura
+ON id_cliente = id_cliente_factura
 INNER JOIN factura_producto
 ON factura.id_factura = factura_producto.id_factura
 INNER JOIN producto
