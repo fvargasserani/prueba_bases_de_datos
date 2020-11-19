@@ -585,14 +585,22 @@ INSERT INTO factura_producto(
 );
 
 -- ¿Que cliente realizó la compra más cara?
-SELECT id_cliente_factura
-INNER JOIN SUM (valor_unitario) AS total FROM producto
-GROUP BY id_cliente_factura
-ORDER BY total DESC
-LIMIT 1);
+SELECT id_cliente_factura FROM factura
+INNER JOIN factura_producto
+ON factura.id_factura = factura_producto.id_factura
+INNER JOIN producto
+ON factura_producto.id_producto = producto.id_producto
+GROUP BY factura.id_cliente_factura
+ORDER BY SUM(valor_unitario) DESC
+LIMIT 1;
 
 -- ¿Que cliente pagó sobre 100 de monto?
-
+SELECT SUM(valor_unitario) >100
+FROM producto
+INNER JOIN factura_producto
+ON factura_producto.id_producto = producto.id_producto
+INNER JOIN factura
+ON factura.id_factura = factura_producto.id_factura;
 
 
 -- ¿Cuantos clientes han comprado el producto 6?
